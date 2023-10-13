@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px black;
+}
+
+.grid {
+  width: 31.25px;
+  height: 31.25px;
+  text-align: center;
+  border: 1px solid black;
+}
