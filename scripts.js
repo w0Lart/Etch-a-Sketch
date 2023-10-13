@@ -7,5 +7,10 @@ for (let i = 0; i < 256; i++) {
   const grid = document.createElement("div");
   grid.className = "grid";
   container.appendChild(grid);
+  grid.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = 'gray';
+  },
+  false,
+  );
 }
 
