@@ -11,6 +11,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-wrap: wrap;
+
 }
 
 .container {
@@ -22,9 +24,16 @@ body {
   box-shadow: 0 0 0 1px black;
 }
 
-.grid {
+.grid16 {
   width: 31.25px;
   height: 31.25px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.grid64 {
+  width: 7.8125px;
+  height: 7.8125px;
   text-align: center;
   border: 1px solid black;
 }
