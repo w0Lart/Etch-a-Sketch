@@ -3,7 +3,30 @@ const container = document.createElement("div");
 container.className = "container";
 body.appendChild(container);
 
+const grid16Button = document.createElement("button");
+grid16Button.className = "grid16Button";
+grid16Button.textContent = "16*16 grid";
+body.appendChild(grid16Button);
 
+const grid64Button = document.createElement("button");
+grid64Button.className = "grid64Button";
+grid64Button.textContent = "64*64 grid";
+body.appendChild(grid64Button);
+
+const grayColorButton = document.createElement("button");
+grayColorButton.className = "grayColorButton";
+grayColorButton.textContent = "Gray color paint";
+body.appendChild(grayColorButton);
+
+const rainbowColorButton = document.createElement("button");
+rainbowColorButton.className = "rainbowColorButton";
+rainbowColorButton.textContent = "Rainbow color paint";
+body.appendChild(rainbowColorButton);
+
+const eraseColorButton = document.createElement("button");
+eraseColorButton.className = "eraseColorButton";
+eraseColorButton.textContent = "Erase the color";
+body.appendChild(eraseColorButton);
 
 
 function createGrid16(){
@@ -53,6 +76,7 @@ function grayColorGrid(){
     });
   });
 };
+grayColorGrid();
 
 function removerColorGrid(){
   let grid16 = document.querySelectorAll(".grid16");
@@ -91,5 +115,8 @@ function rainbowColorGrid(){
   });
 };
 
-
-
+grid16Button.addEventListener("click", createGrid16);
+grid64Button.addEventListener("click", createGrid64);
+grayColorButton.addEventListener("click", grayColorGrid);
+rainbowColorButton.addEventListener("click", rainbowColorGrid);
+eraseColorButton.addEventListener("click",removerColorGrid);
