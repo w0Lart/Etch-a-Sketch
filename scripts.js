@@ -3,30 +3,35 @@ const container = document.createElement("div");
 container.className = "container";
 body.appendChild(container);
 
+const buttonsContainer = document.createElement("div");
+buttonsContainer.className = "buttonsContainer";
+body.appendChild(buttonsContainer);
+
+
 const grid16Button = document.createElement("button");
 grid16Button.className = "grid16Button";
-grid16Button.textContent = "16*16 grid";
-body.appendChild(grid16Button);
+grid16Button.textContent = "Small grid (tap to reset)";
+buttonsContainer.appendChild(grid16Button);
 
 const grid64Button = document.createElement("button");
 grid64Button.className = "grid64Button";
-grid64Button.textContent = "64*64 grid";
-body.appendChild(grid64Button);
+grid64Button.textContent = "Big grid (tap to reset)";
+buttonsContainer.appendChild(grid64Button);
 
 const grayColorButton = document.createElement("button");
 grayColorButton.className = "grayColorButton";
 grayColorButton.textContent = "Gray color paint";
-body.appendChild(grayColorButton);
+buttonsContainer.appendChild(grayColorButton);
 
 const rainbowColorButton = document.createElement("button");
 rainbowColorButton.className = "rainbowColorButton";
 rainbowColorButton.textContent = "Rainbow color paint";
-body.appendChild(rainbowColorButton);
+buttonsContainer.appendChild(rainbowColorButton);
 
 const eraseColorButton = document.createElement("button");
 eraseColorButton.className = "eraseColorButton";
 eraseColorButton.textContent = "Erase the color";
-body.appendChild(eraseColorButton);
+buttonsContainer.appendChild(eraseColorButton);
 
 
 function createGrid16(){

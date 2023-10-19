@@ -12,6 +12,8 @@ body {
   align-items: center;
   min-height: 100vh;
   flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
 
 }
 
@@ -20,6 +22,7 @@ body {
   height: 500px;
   display: flex;
   flex-wrap: wrap;
+
   flex-shrink: 0;
   box-shadow: 0 0 0 1px black;
 }
@@ -36,4 +39,16 @@ body {
   height: 7.8125px;
   text-align: center;
   border: 1px solid black;
+}
+
+.buttonsContainer {
+  max-width: 490px;
+  display: flex;
+  gap: 5px;
+  flex: 0 0 1;
+}
+
+button {
+  max-width: 90px;
+  font-size: small;
 }
