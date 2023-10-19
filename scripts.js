@@ -89,6 +89,14 @@ function grayColorGrid() {
   });
 
   grid64.forEach((element) => {
+    element.addEventListener("mousedown", () => {
+      isMouseDown = true;
+    });
+
+    element.addEventListener("mouseup", () => {
+      isMouseDown = false;
+    });
+
     element.addEventListener("mouseover", (event) => {
       if (isMouseDown) {
         event.target.style.backgroundColor = 'gray';
@@ -121,6 +129,14 @@ function removerColorGrid(){
   });
 
   grid64.forEach((element) => {
+    element.addEventListener("mousedown", () => {
+      isMouseDown = true;
+    });
+
+    element.addEventListener("mouseup", () => {
+      isMouseDown = false;
+    });
+
     element.addEventListener("mouseover", (event) => {
       if (isMouseDown) {
         event.target.style.backgroundColor = 'white';
@@ -158,6 +174,14 @@ function rainbowColorGrid(){
     });
   
     grid64.forEach((element) => {
+      element.addEventListener("mousedown", () => {
+        isMouseDown = true;
+      });
+  
+      element.addEventListener("mouseup", () => {
+        isMouseDown = false;
+      });
+  
       element.addEventListener("mouseover", (event) => {
         if (isMouseDown) {
           event.target.style.backgroundColor = randomColor();
