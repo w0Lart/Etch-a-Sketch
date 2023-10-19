@@ -67,36 +67,67 @@ function createGrid64(){
   }
 };
 
-function grayColorGrid(){
+function grayColorGrid() {
   let grid16 = document.querySelectorAll(".grid16");
+  let grid64 = document.querySelectorAll(".grid64");
+  let isMouseDown = false;
+
   grid16.forEach((element) => {
+    element.addEventListener("mousedown", () => {
+      isMouseDown = true;
+    });
+
+    element.addEventListener("mouseup", () => {
+      isMouseDown = false;
+    });
+
     element.addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = 'gray';
+      if (isMouseDown) {
+        event.target.style.backgroundColor = 'gray';
+      }
     });
   });
-  let grid64 = document.querySelectorAll(".grid64");
+
   grid64.forEach((element) => {
     element.addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = 'gray';
+      if (isMouseDown) {
+        event.target.style.backgroundColor = 'gray';
+      }
     });
   });
-};
+}
 grayColorGrid();
+
 
 function removerColorGrid(){
   let grid16 = document.querySelectorAll(".grid16");
+  let grid64 = document.querySelectorAll(".grid64");
+  let isMouseDown = false;
+
   grid16.forEach((element) => {
+    element.addEventListener("mousedown", () => {
+      isMouseDown = true;
+    });
+
+    element.addEventListener("mouseup", () => {
+      isMouseDown = false;
+    });
+
     element.addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = 'white';
+      if (isMouseDown) {
+        event.target.style.backgroundColor = 'white';
+      }
     });
   });
-  let grid64 = document.querySelectorAll(".grid64");
+
   grid64.forEach((element) => {
     element.addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = 'white';
+      if (isMouseDown) {
+        event.target.style.backgroundColor = 'white';
+      }
     });
   });
-};
+}
 
 function rainbowColorGrid(){
   function randomColor() {
@@ -105,20 +136,35 @@ function rainbowColorGrid(){
       color.push(Math.floor(Math.random() * 256));
     }
     return 'rgb(' + color.join(', ') + ')';
-  }; 
+
+  }
   let grid16 = document.querySelectorAll(".grid16");
-  grid16.forEach((element) => {
-    element.addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = randomColor();
-    });
-  });
   let grid64 = document.querySelectorAll(".grid64");
-  grid64.forEach((element) => {
-    element.addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = randomColor();
+  let isMouseDown = false;
+    grid16.forEach((element) => {
+      element.addEventListener("mousedown", () => {
+        isMouseDown = true;
+      });
+  
+      element.addEventListener("mouseup", () => {
+        isMouseDown = false;
+      });
+  
+      element.addEventListener("mouseover", (event) => {
+        if (isMouseDown) {
+          event.target.style.backgroundColor = randomColor();
+        }
+      });
     });
-  });
-};
+  
+    grid64.forEach((element) => {
+      element.addEventListener("mouseover", (event) => {
+        if (isMouseDown) {
+          event.target.style.backgroundColor = randomColor();
+        }
+      });
+    });
+  };
 
 grid16Button.addEventListener("click", createGrid16);
 grid64Button.addEventListener("click", createGrid64);
